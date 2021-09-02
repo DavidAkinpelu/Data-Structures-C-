@@ -42,11 +42,9 @@ T Stack<T>::pop(){
         exit(EXIT_FAILURE);
     }
     else{
-        NODE* temp = mHead;
+        T data = mHead->data;
         mHead = mHead->next;
         size -= 1;
-        T data = temp->data;
-        delete temp;
         return data;
 
     };
